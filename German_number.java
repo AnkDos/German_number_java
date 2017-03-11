@@ -17,6 +17,7 @@ public String twenty="Zwazig";
 public String hundred="Hundrert";
 public String thausand="Transend";
 public String Million="Millionen";
+public String Billion="Milliarde";
 public String and="und";
 public String upto99="zig";
 //
@@ -62,7 +63,7 @@ System.out.print(Conversion(rm));}
 }
 
 
-if(number>1000 && number<999999){
+if(number>1000 && number<=999999){
 qu=(number/1000);
 rm=(number%1000);
 if(rm==0){System.out.print(Conversion(qu)+thausand);}
@@ -73,6 +74,22 @@ System.out.print(Conversion(rm));
 // obj2.;
 }
 }
+
+if(number>1000000 && number<=999999999){
+qu=(number/1000000);
+rm=(number%1000000);
+if(rm==0){System.out.print(Conversion(qu)+Million);}
+else{
+System.out.print(Conversion(qu)+Million);
+System.out.print(Conversion(rm));
+// German_Numbers_Conversion obj2=new German_Numbers_Conversion();
+// obj2.;
+}
+}
+
+
+
+
 
 return 1 ;
 
